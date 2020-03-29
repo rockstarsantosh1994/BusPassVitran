@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "95310138938",
+    "firebase_url": "https://buspassvitran.firebaseio.com",
+    "project_id": "buspassvitran",
+    "storage_bucket": "buspassvitran.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95310138938:android:f090e943fae889b9",
+        "android_client_info": {
+          "package_name": "com.rockstar.buspassvitran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95310138938-p8157fvans1rcqa8t2s14nc7nm1lc6fq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rockstar.buspassvitran",
+            "certificate_hash": "f62940eebff537702e86c345268bc81d99352eda"
+          }
+        },
+        {
+          "client_id": "95310138938-of4n2im4bvpph2r9h75ef8sn9u27rcag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEWyypf0gibLNFtd4fC8EKwlMsB0SGkyM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95310138938-of4n2im4bvpph2r9h75ef8sn9u27rcag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

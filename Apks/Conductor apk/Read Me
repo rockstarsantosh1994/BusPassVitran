@@ -1,0 +1,6 @@
+This is conductor apk.
+
+message will be auto send by submitting on send notification button.
+
+Note:-You have to enable permissions manally.
+		AppInfo -> Permissions -> Camera,Storage,Sms,Telephone etc.

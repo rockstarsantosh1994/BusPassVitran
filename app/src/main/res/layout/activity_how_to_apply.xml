@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rockstar.buspassvitran.activity.HowToApplyActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The following documents are required for different categories:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="a. FOR STUDENTS CONCESSION PASSES."
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="b. FOR STUDENTS PASSES. The documents required are:-Aadhar card, Bonafide Certificate, Principal attested on pass form"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="c. FOR SENIOR CITIZEN Certificate of Age proof + proof of residence of Nashik and attested pass from Gazetted Officer/MLA/MP to certify sr.Citizens will be entitiled to get Sr. Citizen without any income limit w.e.f 1st Oct 2011"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

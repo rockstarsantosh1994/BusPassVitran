@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">BusPassVitran</string>
+    <string name="turn_off_flashlight">Turn Off FlashLight</string>
+    <string name="turn_on_flashlight">turnonflashlight</string>
+    <string name="SENDER_ID">800482301040</string>
+
+    <string name="notifications_admin_channel_name">chat</string>
+    <string name="notifications_admin_channel_description"> Firebase PushNotification</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don\'t have account?</string>
+    <string name="sign_up">SignUp</string>
+    <string name="address">Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="signup">Sign Up</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="log_in">Log In</string>
+    <string name="join_group">Join Group</string>
+    <string name="view_group">View Group</string>
+    <string name="near_me">Near Me</string>
+    <string name="emergency">Emergency</string>
+    <string name="logout">LogOut</string>
+    <string name="policeman">Policeman</string>
+    <string name="doctor">Doctor</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="fire_extinguisher">Fire Extinguisher</string>
+    <string name="fill_up_form_to_register">Fill up form to register</string>
+    <string name="submit">Submit</string>
+    <string name="type">Type</string>
+    <string name="phone_no">Phone No</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+</resources>

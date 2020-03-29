@@ -1,0 +1,6 @@
+This is user side apk.
+
+***  When Qr Code will be generate after applying for pass....to save the Qr Img click on submit button once only and wait for some time these  will redirect automatically to main page......or else multiple copies will be generate and apk will get crashed.
+
+Note:-You have to enable permissions manally. 
+		AppInfo -> Permissions -> Camera,Storage,Sms,Telephone etc.
