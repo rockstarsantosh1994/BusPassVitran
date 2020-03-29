@@ -27,6 +27,7 @@ class CommonMethods {
             return matcher.matches()
         }
 
+
         fun setPreference(
             context: Context,
             key: String?,

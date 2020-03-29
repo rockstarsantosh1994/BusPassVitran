@@ -105,32 +105,32 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener  {
               }
 
               R.id.ll_logout ->{
-                  val builder = AlertDialog.Builder(this)
-                  //set title for alert dialog
-                  builder.setTitle(R.string.app_name)
-                  //set message for alert dialog
-                  builder.setMessage("Are you sure want to logout")
-                  builder.setIcon(android.R.drawable.ic_dialog_alert)
+                      val builder = AlertDialog.Builder(this)
+                      //set title for alert dialog
+                      builder.setTitle(R.string.app_name)
+                      //set message for alert dialog
+                      builder.setMessage("Are you sure want to logout")
+                      builder.setIcon(android.R.drawable.ic_dialog_alert)
 
-                  //performing positive action
-                  builder.setPositiveButton("Yes"){dialogInterface, which ->
-                      CommonMethods.setPreference(applicationContext, CommonMethods.USER_ID,"DNF")
-                      val intent: Intent = Intent(applicationContext,LoginActivity::class.java)
-                      intent.putExtra("type","JoinGroup")
-                      startActivity(intent)
-                      finish()
-                      Toast.makeText(applicationContext,"See you again!", Toast.LENGTH_LONG).show()
-                  }
+                      //performing positive action
+                      builder.setPositiveButton("Yes"){dialogInterface, which ->
+                          CommonMethods.setPreference(applicationContext, CommonMethods.USER_ID,"DNF")
+                          val intent: Intent = Intent(applicationContext,LoginActivity::class.java)
+                          intent.putExtra("type","JoinGroup")
+                          startActivity(intent)
+                          finish()
+                          Toast.makeText(applicationContext,"See you again!", Toast.LENGTH_LONG).show()
+                      }
 
-                  //performing negative action
-                  builder.setNegativeButton("No"){dialogInterface, which ->
+                      //performing negative action
+                      builder.setNegativeButton("No"){dialogInterface, which ->
 
-                  }
-                  // Create the AlertDialog
-                  val alertDialog: AlertDialog = builder.create()
-                  // Set other dialog properties
-                  alertDialog.setCancelable(false)
-                  alertDialog.show()
+                      }
+                      // Create the AlertDialog
+                      val alertDialog: AlertDialog = builder.create()
+                      // Set other dialog properties
+                      alertDialog.setCancelable(false)
+                      alertDialog.show()
               }
 
           }
