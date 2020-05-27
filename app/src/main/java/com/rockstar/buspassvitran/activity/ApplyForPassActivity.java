@@ -145,12 +145,13 @@ public class ApplyForPassActivity extends AppCompatActivity  implements
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable  Intent data) {
 
-        switch(requestCode){
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
             case 3:
-                if(requestCode==RESULT_OK){
-                    String path=data.getData().getPath();
+                if (requestCode == RESULT_OK) {
+                    String path = data.getData().getPath();
                     tv_file.setText(path);
-                    Toast.makeText(this, ""+path, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "" + path, Toast.LENGTH_LONG).show();
                 }
                 break;
         }

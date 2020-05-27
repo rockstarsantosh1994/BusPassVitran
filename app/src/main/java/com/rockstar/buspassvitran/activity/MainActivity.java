@@ -19,13 +19,13 @@ import com.rockstar.buspassvitran.saathi.activity.LoginActivity;
 public class MainActivity extends AppCompatActivity {
 
     Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context=this;
     }
-
 
     public void share(View view) {
         Intent intent=new Intent(MainActivity.this,QrCodeViewerActivity.class);
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     public void howToApply(View view) {
         Intent intent=new Intent(MainActivity.this, DashBoardActivity.class);
         startActivity(intent);
-
     }
 
     public void busPassCenter(View view) {
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     public void aboutWhatsapp(View view) {
         Intent intent=new Intent(MainActivity.this,ImageUpload.class);
         startActivity(intent);
-
     }
 
     public void logout(View view) {

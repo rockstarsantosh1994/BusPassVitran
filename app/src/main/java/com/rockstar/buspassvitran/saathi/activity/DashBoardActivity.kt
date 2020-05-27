@@ -30,7 +30,6 @@ import java.util.*
 
 class DashBoardActivity : AppCompatActivity(), View.OnClickListener  {
 
-
     var llJoinGroup: LinearLayout?=null
     var llViewGroup: LinearLayout?=null
     var llNearMe: LinearLayout?=null
@@ -45,7 +44,6 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
-
 
         //Basic intialisation...
         initViews()
@@ -75,7 +73,6 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener  {
         llNearMe?.setOnClickListener(this)
         llEmergency?.setOnClickListener(this)
         llLogout?.setOnClickListener(this)
-
     }
 
 

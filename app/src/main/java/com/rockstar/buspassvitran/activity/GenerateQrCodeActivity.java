@@ -89,7 +89,7 @@ public class GenerateQrCodeActivity extends AppCompatActivity implements Payment
                     bitmap = TextToImageEncode(combined);
                     qrImage.setImageBitmap(bitmap);
                     String path = saveImage(bitmap);  //give read write permission
-                    Toast.makeText(GenerateQrCodeActivity.this, "QRCode saved to -> "+path, Toast.LENGTH_LONG).show();
+                   // Toast.makeText(GenerateQrCodeActivity.this, "QRCode saved to -> "+path, Toast.LENGTH_LONG).show();
                     startPayment();
                     finish();
 
@@ -231,16 +231,16 @@ public class GenerateQrCodeActivity extends AppCompatActivity implements Payment
     @Override
     public void onPaymentSuccess(String s) {
         Toast.makeText(this, "Payment Transaction Successful", Toast.LENGTH_LONG).show();
-        finish();
         Intent intent=new Intent(GenerateQrCodeActivity.this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override
     public void onPaymentError(int i, String s) {
         Toast.makeText(this, "Payment Transaction Unsuccessful Please try again later", Toast.LENGTH_LONG).show();
-        finish();
         Intent intent=new Intent(GenerateQrCodeActivity.this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -31,6 +31,7 @@ public class ViewPassActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 */
         final RecyclerView rv= (RecyclerView) findViewById(R.id.rv);
+
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(new MyAdapter(ViewPassActivity.this,getData())) ;
     }

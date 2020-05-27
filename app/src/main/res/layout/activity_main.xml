@@ -26,15 +26,17 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 app:cardElevation="0dp">
+
                 <ImageButton
+                    android:id="@+id/tutorialImageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tutorialImageButton"
-                    android:tint="@color/dashboardColor"
+                    android:layout_marginTop="15dp"
                     android:background="#ffffff"
                     android:onClick="applyForPass"
                     android:src="@drawable/ic_library_books_black_24dp"
-                    android:layout_marginTop="15dp"/>
+                    android:tint="@color/dashboardColor" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

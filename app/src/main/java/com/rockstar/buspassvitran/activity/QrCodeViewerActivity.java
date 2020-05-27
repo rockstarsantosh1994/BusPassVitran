@@ -19,6 +19,7 @@ import android.os.Bundle;
 
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 
@@ -41,13 +42,15 @@ public class QrCodeViewerActivity extends AppCompatActivity {
 
     String st_subphonenumber,st_subfirstname,st_subtodate;
     SPLib splib;
-
+    private static int ivalue=30;
     private static final int REQUEST_SMS = 0;
     private BroadcastReceiver sentStatusReceiver, deliveredStatusReceiver;
     public static int counter=0;
     private Vibrator vibrator;
 
     boolean doubleBackOnce=false;
+
+    public static String temp;
 
     Date dateWithoutTime;
 
@@ -107,6 +110,7 @@ public class QrCodeViewerActivity extends AppCompatActivity {
                         splib.sharedpreferences.edit().putString(SPLib.Key.Sp_subphonenumber,st_subphonenumber).commit();
                         splib.sharedpreferences.edit().putString(SPLib.Key.Sp_subfirstname,st_subfirstname).commit();
                         splib.sharedpreferences.edit().putString(SPLib.Key.Sp_subsubtodate,st_subsubtodate).commit();
+
                         //viewing shared preference data
                         Log.d("mytag", "Shared Preference Value "+splib.sharedpreferences.getString(SPLib.Key.Sp_subphonenumber,"data available"));
                         Log.d("mytag", "\nOn Scan Result: "+result);
@@ -116,13 +120,12 @@ public class QrCodeViewerActivity extends AppCompatActivity {
                         Log.d("mytag", "\nFianl to date is "+st_subsubtodate);
 
                         getSmsProgramtically();
+
                         Toast.makeText(QrCodeViewerActivity.this, "SMS Sent Successfully...", Toast.LENGTH_LONG).show();
                         vibrator.vibrate(1500);
 
-                        Toast.makeText(QrCodeViewerActivity.this, "Result copied to clipboard", Toast.LENGTH_SHORT).show();
-                       /* Intent intent=new Intent(QrCodeViewerActivity.this,ScannerActivity.class);
+                        Intent intent=new Intent(QrCodeViewerActivity.this,QrCodeViewerActivity.class);
                         startActivity(intent);
-*/
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -175,8 +178,8 @@ public class QrCodeViewerActivity extends AppCompatActivity {
 
     public void sendMySMS() {
 
-
         String strnum1=splib.sharedpreferences.getString(SPLib.Key.Sp_subphonenumber,"Sp_subphonenumber");
+        temp=strnum1;
         String firstname=splib.sharedpreferences.getString(SPLib.Key.Sp_subfirstname,"Sp_subfirstname");
         String todate=splib.sharedpreferences.getString(SPLib.Key.Sp_subsubtodate,"Sp_subsubtodate");
         //String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
@@ -221,8 +224,15 @@ public class QrCodeViewerActivity extends AppCompatActivity {
         long diffDays = diff / (24 * 60 * 60 * 1000);*/
 
         Integer i=30;
-        i--;
-        String message ="Hii "+firstname+", \n Your Pass is Punched.  You have "+i+" days left.  Your Renewe date is"+todate;
+        String message="";
+        if(temp.equals(strnum1)){
+            ivalue--;
+            message ="Hii "+firstname+", \n Your Pass is Punched.  You have "+ivalue+" days left";
+        }else{
+            i--;
+            ivalue=i;
+            message ="Hii "+firstname+", \n Your Pass is Punched.  You have "+i+" days left";
+        }
 
 
 
@@ -349,11 +359,11 @@ public class QrCodeViewerActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{SEND_SMS}, REQUEST_SMS);
     }
 
-
-
-
-
-
+    public void openQRViewActivity(View view) {
+        Intent intent=new Intent(getApplicationContext(),QrCodeViewerActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
 
 

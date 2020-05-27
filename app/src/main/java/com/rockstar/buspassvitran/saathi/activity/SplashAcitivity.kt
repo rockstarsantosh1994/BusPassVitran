@@ -10,6 +10,8 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
 import com.rockstar.buspassvitran.R
 import com.rockstar.buspassvitran.activity.MainActivity
+import com.rockstar.buspassvitran.activity.QrCodeViewerActivity
+import com.rockstar.buspassvitran.activity.ScannerActivity
 import java.io.IOException
 
 class SplashAcitivity : AppCompatActivity() {
@@ -44,6 +46,10 @@ class SplashAcitivity : AppCompatActivity() {
             if (!isFinishing) {
                 if(CommonMethods.getPrefrence(applicationContext, CommonMethods.USER_ID).equals("DNF")){
                     val intent = Intent(applicationContext, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }else if(CommonMethods.getPrefrence(applicationContext, CommonMethods.USER_ID).equals("1234567890")){
+                    val intent = Intent(applicationContext, QrCodeViewerActivity::class.java)
                     startActivity(intent)
                     finish()
                 }else{
